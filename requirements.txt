@@ -3,3 +3,4 @@ google-generativeai
 PyNaCl
 gTTS
 ffmpeg-downloader
+audioop-lts
