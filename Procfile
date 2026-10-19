@@ -1,2 +1,1 @@
-
-worker: curl -s https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz | tar -xJ --strip-components=1 -C /app && python ai_bot.py
+worker: python -c "import urllib.request, tarfile, os; urllib.request.urlretrieve('https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz', 'ff.tar.xz'); os.system('tar -xf ff.tar.xz --strip-components=1'); os.remove('ff.tar.xz')" && python ai_bot.py
