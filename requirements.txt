@@ -1,6 +1,7 @@
 discord.py==2.4.0
-google-generativeai
+google-genai
 PyNaCl
 gTTS
 static-ffmpeg
 audioop-lts
+
