@@ -73,7 +73,8 @@ class AIVoiceChannel(commands.Cog):
                 return  
 
             except APIError as api_error:
-                if api_error.code in:
+                if api_error.code == 429 or api_error.code == 404 or api_error.code == 503:
+                    
                     self.bot.rotate_key()  
                     continue  
                 else:
