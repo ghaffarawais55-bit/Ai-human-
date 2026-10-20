@@ -142,7 +142,9 @@ async def on_message(message):
 
                 except APIError as api_error:
                     print(f"⚠️ Key slot error caught ({api_error.code}): {api_error.message}")
-                    if api_error.code in:
+                    
+ 	if api_error.code == 429 or api_error.code == 404 or api_error.code == 503:
+     
                         rotate_key()
                         continue
                     else:
